@@ -1,1 +1,10 @@
+<h1>Current Articles</h1>
 
+<ul>
+{{#each Articles}}
+    <li>
+        <p>{{this.title}}</p>
+        <p><a href="/article/"+{{this._id}}>{{this.link}}</a></p>
+    </li>
+{{/each}}
+</ul>

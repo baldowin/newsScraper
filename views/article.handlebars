@@ -1,0 +1,29 @@
+<h1>{{article.title}}</h1>
+{{#each text}}
+    <p>{{this}}</p>
+{{/each}}
+
+<h2>comments</h2>
+<ul>
+{{#each article.comments}}
+<li>
+<h5>{{this.user}}</h5>
+<p>{{this.text}}</p>
+</li>
+{{/each}}
+</ul>
+
+<h2>Add a Comment</h2>
+<form class="create-form">
+  <div class="form-group">
+    <label for="comment">Comment:</label>
+    <input type="text" id="comment" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="user">Who are you?</label><br>
+    <input type="text" name="user">
+  </div>
+
+  <button type="submit" id={{article._id}}>Add Comment</button>
+</form>
